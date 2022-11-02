@@ -10,17 +10,25 @@
     <meta name="description" content="Stream - Bootstrap 4 UI Kit">
     <meta name="author" content="htmlstream.com">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/assets/favicon.ico'%}"/>
+
     <!-- Web Fonts -->
     <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700%7COpen+Sans:300,400,700" rel="stylesheet">
-    <!-- Bootstrap Styles -->
-    <link rel="stylesheet" type="text/css" href="../../static/assets/vendors/bootstrap/css/bootstrap.min.css">
-    <!-- Components Vendor Styles -->
-    <link rel="stylesheet" type="text/css" href="../../static/assets/vendors/font-awesome/css/fontawesome-all.min.css">
-    <!-- Theme Styles -->
-    <link rel="stylesheet" type="text/css" href="../../static/assets/css/styles.css">
 
-    <link rel="stylesheet" href="./flip-master/example/flip/flip.min.css">
+    <!-- Bootstrap Styles -->
+    <link rel="stylesheet" href="{% static '/assets/vendors/bootstrap/css/bootstrap.min.css'%}"/>
+
+    <!-- Components Vendor Styles -->
+    <link rel="stylesheet" href="{% static '/assets/vendors/font-awesome/css/fontawesome-all.min.css'%}"/>
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="{% static '/assets/css/styles.css'%}"/>
+    <link rel="stylesheet" href="{% static 'flip-master/example/flip/flip.min.css'%}"/>
+
+    <!-- My styles -->
+
+
+    {% block header %}{% endblock %}
 
     <!-- Demo Custome Code (demo page only) -->
     <style type="text/css">
@@ -66,7 +74,7 @@
     </style>
   </head>
 <body id="js-home">
-  {% block header %}{% endblock %}
+
   {% block contents %}{% endblock %}
 </body>
 </html>
